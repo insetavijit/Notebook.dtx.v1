@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "DTXV1.0"
+version = "0.1.0"
+description = "Python environment for financial data analysis and charting in Jupyter notebooks"
+authors = ["Avijit Sarkar <avisoffice@gmail.com>"]
+license = "MIT"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.13,<4.0"
+pandas = "^2.3.2"
+matplotlib = "^3.10.6"
+mplfinance = "^0.12.10b0"
+#yfinance = "^0.2.65"
+ta = "^0.11.0"
+notebook = "^7.4.5"
+ipykernel = "^6.30.1"
+#plotly = "^6.0.0"
+ta-lib = "^0.6.7"
+backtrader = "^1.9.78.123"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+

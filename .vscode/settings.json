@@ -1,0 +1,28 @@
+{
+    // UI tweaks
+    "workbench.activityBar.location": "bottom", // hide left activity bar for minimal UI
+    "workbench.colorTheme": "Catppuccin Macchiato", // soothing dark theme
+    "workbench.iconTheme": "catppuccin-macchiato", // matching icons
+    // Editor font settings
+    "editor.fontFamily": "'JetBrainsMono Nerd Font Propo', 'FiraCode Nerd Font Mono', monospace",
+    "editor.fontSize": 15,
+    "editor.fontLigatures": true, // enable ligatures for FiraCode
+    // Code view
+    "editor.minimap.enabled": false, // disable minimap for less clutter
+    "editor.stickyScroll.enabled": false,
+    "editor.lineNumbers": "on", // relative line numbers (Vim-style nav)
+    "editor.cursorBlinking": "smooth", // smoother cursor animation
+    "editor.smoothScrolling": true, // smooth scroll
+    "editor.renderWhitespace": "boundary", // only show trailing spaces
+    "editor.formatOnSave": true, // auto-format on save
+    // Terminal
+    "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font Propo', 'FiraCode Nerd Font Mono', monospace",
+    "terminal.integrated.fontSize": 14,
+    "editor.rulers": [
+        80
+    ],
+    // Files
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "python.defaultInterpreterPath": "/home/avijit/.cache/pypoetry/virtualenvs/dtxv1-0-Igtwredk-py3.13/bin/python"
+}
