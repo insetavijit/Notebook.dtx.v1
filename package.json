@@ -1,10 +1,10 @@
 {
   "name": "auto-git-commit",
   "version": "1.0.0",
-  "description": "Reliable auto-commit watcher",
+  "description": "Reliable auto-commit and auto-push watcher without Husky",
   "scripts": {
     "autocommit": "chokidar '**/*' -i 'node_modules/**' -i '.git/**' -i '*.log' -i 'package-lock.json' -c \"git add -A && git commit -m 'WIP auto-commit' || true\"",
-    "autocommit:push": "chokidar '**/*' -i 'node_modules/**' -i '.git/**' -i '*.log' -i 'package-lock.json' -c \"git add -A && git commit -m 'WIP auto-commit' || true && git push origin master || true\""
+    "autocommit:push": "chokidar '**/*' -i 'node_modules/**' -i '.git/**' -i '*.log' -i 'package-lock.json' -c \"git add -A && git commit -m 'WIP auto-commit' || true && git push origin $(git rev-parse --abbrev-ref HEAD) || true\""
   },
   "devDependencies": {
     "chokidar-cli": "^3.0.0"
