@@ -1,17 +1,26 @@
 const simpleGit = require('simple-git');
 const git = simpleGit();
-const fs = require('fs');
 
 async function autoCommitPush() {
   try {
-    // Get list of changed files
+    // Get the status of the repo
     const status = await git.status();
+
+    // Combine modified and not-added files
     const changedFiles = status.modified.concat(status.not_added);
 
     if (changedFiles.length === 0) {
       console.log('No changes detected.');
       return;
     }
+
+    // Display table of changed files
+    const tableData = changedFiles.map((file, index) => ({
+      '#': index + 1,
+      File: file,
+      Status: status.not_added.includes(file) ? 'Added' : 'Modified',
+    }));
+    console.table(tableData);
 
     // Stage all changes
     await git.add('.');
