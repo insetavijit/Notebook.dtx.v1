@@ -1,18 +1,11 @@
 {
   "name": "auto-git-commit",
   "version": "1.0.0",
-  "description": "Watch files and auto-commit changes (manual message, no AI)",
-  "main": "index.js",
+  "description": "Reliable auto-commit watcher",
   "scripts": {
-    "autocommit": "chokidar '**/*' -i 'node_modules/**' -i '.git/**' -c \"git add . && git commit -m 'WIP auto-commit' || true\""
+    "autocommit": "chokidar '**/*' -i 'node_modules/**' -i '.git/**' -i '*.log' -i 'package-lock.json' -c \"git add -A && git commit -m 'WIP auto-commit' || true\"",
+    "autocommit:push": "chokidar '**/*' -i 'node_modules/**' -i '.git/**' -i '*.log' -i 'package-lock.json' -c \"git add -A && git commit -m 'WIP auto-commit' || true && git push origin master || true\""
   },
-  "keywords": [
-    "git",
-    "auto-commit",
-    "watcher"
-  ],
-  "author": "Your Name",
-  "license": "MIT",
   "devDependencies": {
     "chokidar-cli": "^3.0.0"
   }
