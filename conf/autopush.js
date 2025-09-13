@@ -1,0 +1,37 @@
+const simpleGit = require('simple-git');
+const git = simpleGit();
+const fs = require('fs');
+
+async function autoCommitPush() {
+  try {
+    // Get list of changed files
+    const status = await git.status();
+    const changedFiles = status.modified.concat(status.not_added);
+
+    if (changedFiles.length === 0) {
+      console.log('No changes detected.');
+      return;
+    }
+
+    // Stage all changes
+    await git.add('.');
+
+    // Create commit message with datetime and changed files
+    const now = new Date();
+    const datetime = now.toISOString().replace('T', ' ').split('.')[0]; // YYYY-MM-DD HH:MM:SS
+    const commitMessage = `Auto-commit ${datetime} - ${changedFiles.join(', ')}`;
+
+    // Commit
+    await git.commit(commitMessage);
+    console.log('Committed:', commitMessage);
+
+    // Push
+    await git.push();
+    console.log('Pushed to remote repository.');
+  } catch (err) {
+    console.error('Error:', err);
+  }
+}
+
+// Run the function
+autoCommitPush();

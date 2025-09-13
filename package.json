@@ -4,9 +4,13 @@
   "description": "Reliable auto-commit watcher",
   "scripts": {
     "autocommit": "chokidar '**/*' -i 'node_modules/**' -i '.git/**' -i '*.log' -i 'package-lock.json' -c \"git add -A && git commit -m 'WIP auto-commit' || true\"",
+    "push": "node ./conf/autopush.js",
     "autocommit:push": "chokidar '**/*' -i 'node_modules/**' -i '.git/**' -i '*.log' -i 'package-lock.json' -c \"git add -A && git commit -m 'WIP auto-commit' || true && git push origin master || true\""
   },
   "devDependencies": {
     "chokidar-cli": "^3.0.0"
+  },
+  "dependencies": {
+    "simple-git": "^3.28.0"
   }
 }
