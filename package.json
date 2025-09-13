@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Reliable auto-commit watcher",
   "scripts": {
+    "Start": "npm run pyenv",
     "autocommit": "chokidar '**/*' -i 'node_modules/**' -i '.git/**' -i '*.log' -i 'package-lock.json' -c \"git add -A && git commit -m 'WIP auto-commit' || true\"",
     "push": "node ./conf/autopush.js",
+    "pyenv": "poetry env activate",
     "autocommit:push": "chokidar '**/*' -i 'node_modules/**' -i '.git/**' -i '*.log' -i 'package-lock.json' -c \"git add -A && git commit -m 'WIP auto-commit' || true && git push origin master || true\""
   },
   "devDependencies": {
