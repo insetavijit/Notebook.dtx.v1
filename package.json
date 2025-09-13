@@ -1,0 +1,19 @@
+{
+  "name": "auto-git-commit",
+  "version": "1.0.0",
+  "description": "Watch files and auto-commit changes (manual message, no AI)",
+  "main": "index.js",
+  "scripts": {
+    "autocommit": "chokidar '**/*' -i 'node_modules/**' -i '.git/**' -c \"git add . && git commit -m 'WIP auto-commit' || true\""
+  },
+  "keywords": [
+    "git",
+    "auto-commit",
+    "watcher"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0"
+  }
+}
