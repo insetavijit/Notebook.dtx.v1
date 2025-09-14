@@ -1,4 +1,2 @@
 from .plot_results import plot_results
 from .plotter import CandlestickPlotter
-
-__all__ = ["CandlestickPlotter", "plot_results"]
