@@ -14,9 +14,9 @@
         }
     ],
     "settings": {
-        "python.defaultInterpreterPath": ".venv/bin/python",
+        "python.defaultInterpreterPath": "/home/avijit/.cache/pypoetry/virtualenvs/dtxv1-0-Igtwredk-py3.13/bin/python",
         "python.analysis.extraPaths": [
-            "v1/modules"
+            "${workspaceFolder}/v1/modules"
         ],
         "jupyter.notebookFileRoot": "${workspaceFolder}/v1"
     }
