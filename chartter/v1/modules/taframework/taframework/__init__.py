@@ -4,6 +4,7 @@ from .enums import ComparisonType, IndicatorType
 from .data_classes import AnalysisResult, IndicatorConfig
 from .exceptions import TAException
 from .utils import generate_sample_data  # <-- added
+from .query_parser import QueryParser  # <-- added
 
 __version__ = "0.1.0"
 
@@ -18,4 +19,5 @@ __all__ = [
     "IndicatorConfig",
     "TAException",
     "generate_sample_data",  # <-- added
+    "QueryParser",
 ]

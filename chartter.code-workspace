@@ -1,0 +1,23 @@
+{
+    "folders": [
+        {
+            "name": "root",
+            "path": "."
+        },
+        {
+            "name": "Chartter",
+            "path": "chartter"
+        },
+        {
+            "name": "taframework",
+            "path": "./chartter/v1/modules/taframework/taframework"
+        }
+    ],
+    "settings": {
+        "python.defaultInterpreterPath": ".venv/bin/python",
+        "python.analysis.extraPaths": [
+            "v1/modules"
+        ],
+        "jupyter.notebookFileRoot": "${workspaceFolder}/v1"
+    }
+}
